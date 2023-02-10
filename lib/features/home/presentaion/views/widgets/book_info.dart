@@ -1,3 +1,5 @@
+import 'package:bookly/core/constants.dart';
+import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -13,23 +15,18 @@ class BookInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          width: 65.w,
+          width: 50.w,
           child: Text(
             "Harry Potter and the Goblet of fire.",
             maxLines: 2,
-            style: TextStyle(
-                color: Colors.white.withOpacity(0.95),
-                fontSize: 15.sp,
-                fontWeight: FontWeight.w400),
+            overflow: TextOverflow.ellipsis,
+            style: Styles.kSectraFineTitleMedium,
           ),
         ),
         SizedBox(height: 2.h),
         Text(
           "Anas Nabih",
-          style: TextStyle(
-              color: Colors.white.withOpacity(0.7),
-              fontSize: 15.sp,
-              fontWeight: FontWeight.w500),
+          style: Styles.kMonsterratMedium.copyWith(color: Colors.white.withOpacity(0.7)),
         ),
         SizedBox(height: 2.h),
         SizedBox(
@@ -38,27 +35,19 @@ class BookInfo extends StatelessWidget {
             children: [
               Text(
                 "19.99 \$",
-                style: TextStyle(
-                    color: Colors.white.withOpacity(0.9),
-                    fontSize: 15.sp,
-                    fontWeight: FontWeight.w700),
+                style: Styles.kMonsterratLarge,
               ),
               const Spacer(),
               Icon(Icons.star, size: 2.5.h, color: Colors.amber),
               Text(
                 "4.8",
-                style: TextStyle(
-                    color: Colors.white.withOpacity(0.9),
-                    fontSize: 15.sp,
-                    fontWeight: FontWeight.w700),
+                style: Styles.kMonsterratLarge.copyWith(fontSize: 13.sp),
               ),
-              SizedBox(width: 1.5.w),
+              SizedBox(width: 1.w),
               Text(
                 "(2390)",
-                style: TextStyle(
-                    color: Colors.white.withOpacity(0.5),
-                    fontSize: 13.sp,
-                    fontWeight: FontWeight.w500),
+                style: Styles.kMonsterratSmall
+                    .copyWith(color: Colors.white.withOpacity(0.5)),
               ),
             ],
           ),

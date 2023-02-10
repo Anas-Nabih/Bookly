@@ -1,6 +1,6 @@
 import 'package:bookly/core/constants.dart';
+import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 
 class TextHeadline extends StatelessWidget {
   const TextHeadline({
@@ -14,7 +14,7 @@ class TextHeadline extends StatelessWidget {
           horizontal: Const.horizontalPadding, vertical: Const.verticalPadding),
       child: Text(
         "Best Seller",
-        style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600),
+        style: Styles.kMonsterratLarge,
       ),
     );
   }
