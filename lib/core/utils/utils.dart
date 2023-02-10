@@ -9,7 +9,7 @@ class Utils {
   static loadSvgImg({required String svgImg}) {
     return SvgPicture.asset(
       svgImg,
-      color: Colors.white,
+       color: Colors.white,
     );
   }
 

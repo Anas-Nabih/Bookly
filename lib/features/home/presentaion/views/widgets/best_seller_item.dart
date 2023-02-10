@@ -3,8 +3,8 @@ import 'package:bookly/features/home/presentaion/views/widgets/book_info.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({Key? key}) : super(key: key);
+class BookItem extends StatelessWidget {
+  const BookItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

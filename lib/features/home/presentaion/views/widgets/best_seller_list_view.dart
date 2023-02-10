@@ -13,7 +13,7 @@ class BestSellerListView extends StatelessWidget {
       itemCount: 8,
       itemBuilder: (context, index) => GestureDetector(
           onTap: ()=>Utils.push(context: context, navigationScreen:const  BookDetailsView()),
-          child: const BestSellerItem()),
+          child: const BookItem()),
     );
   }
 }

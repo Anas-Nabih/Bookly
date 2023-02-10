@@ -2,8 +2,8 @@ import 'package:bookly/core/utils/styles.dart';
  import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-class BuyAndFreePreview extends StatelessWidget {
-  const BuyAndFreePreview({
+class BuyAndFreePreviewButton extends StatelessWidget {
+  const BuyAndFreePreviewButton({
     Key? key,
   }) : super(key: key);
 
@@ -13,7 +13,7 @@ class BuyAndFreePreview extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          height: 5.h,
+          height: 6.h,
           width: 30.w,
           decoration: const BoxDecoration(
               color: Colors.white,
@@ -29,10 +29,10 @@ class BuyAndFreePreview extends StatelessWidget {
           ),
         ),
         Container(
-          height: 5.h,
+          height: 6.h,
           width: 30.w,
           decoration: const BoxDecoration(
-              color: Colors.red,
+              color: Color(0XFFEF8262),
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(10),
                 topRight: Radius.circular(10),

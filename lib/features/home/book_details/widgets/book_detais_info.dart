@@ -10,7 +10,7 @@ class BookDetailsInfo extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 35.h,
+          height: 32.h,
           width: 45.w,
           decoration: BoxDecoration(
               color: Colors.grey.withOpacity(.5),
