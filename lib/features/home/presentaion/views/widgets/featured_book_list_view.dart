@@ -8,7 +8,7 @@ class FeaturedBooksListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 30.h,
+      height: 32.h,
       child: ListView.builder(
         itemCount: 8,
         scrollDirection: Axis.horizontal,
