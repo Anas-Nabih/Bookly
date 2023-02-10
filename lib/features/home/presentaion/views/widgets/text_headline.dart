@@ -4,16 +4,17 @@ import 'package:flutter/material.dart';
 
 class TextHeadline extends StatelessWidget {
   const TextHeadline({
-    Key? key,
+    Key? key,required this.headLine
   }) : super(key: key);
 
+  final String headLine;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
           horizontal: Const.horizontalPadding, vertical: Const.verticalPadding),
       child: Text(
-        "Best Seller",
+       headLine ,
         style: Styles.kMonsterratLarge,
       ),
     );

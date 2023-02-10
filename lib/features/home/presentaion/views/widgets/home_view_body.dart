@@ -17,7 +17,7 @@ class HomeViewBody extends StatelessWidget {
             children: const [
               CustomAppBar(),
               FeaturedBooksListView(),
-              TextHeadline(),
+              TextHeadline(headLine: "Best Seller"),
             ],
           ),
         ),
