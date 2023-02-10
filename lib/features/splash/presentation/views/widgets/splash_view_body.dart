@@ -1,10 +1,8 @@
-import 'package:bookly/core/constants.dart';
 import 'package:bookly/core/utils/assets_data.dart';
 import 'package:bookly/core/utils/utils.dart';
 import 'package:bookly/features/home/presentaion/views/home_view.dart';
 import 'package:bookly/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -54,11 +52,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
     _animationController.forward();
   }
 
-  handleNavigation(){
+  handleNavigation() {
     Future.delayed(
       const Duration(seconds: 2),
-          () => Get.to(const HomeView(),
-          transition: Transition.fade, duration: Const.durationTransition),
+      () => Utils.push(context: context, navigationScreen: const HomeView()),
     );
   }
 }
