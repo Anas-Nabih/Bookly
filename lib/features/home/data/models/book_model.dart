@@ -22,18 +22,18 @@ class BookModel {
     etag = json['etag'];
     selfLink = json['selfLink'];
     volumeInfo = json['volumeInfo'] != null
-        ? new VolumeInfo.fromJson(json['volumeInfo'])
+        ?   VolumeInfo.fromJson(json['volumeInfo'])
         : null;
     saleInfo = json['saleInfo'] != null
-        ? new SaleInfo.fromJson(json['saleInfo'])
+        ?   SaleInfo.fromJson(json['saleInfo'])
         : null;
     accessInfo = json['accessInfo'] != null
-        ? new AccessInfo.fromJson(json['accessInfo'])
+        ?   AccessInfo.fromJson(json['accessInfo'])
         : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data =   Map<String, dynamic>();
     data['kind'] = this.kind;
     data['id'] = this.id;
     data['etag'] = this.etag;
