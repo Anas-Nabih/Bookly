@@ -1,12 +1,13 @@
-import 'package:bookly/core/constants.dart';
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/features/home/data/models/book_model.dart';
+import 'package:bookly/features/home/presentaion/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class BookInfo extends StatelessWidget {
-  const BookInfo({
-    Key? key,
-  }) : super(key: key);
+  final BookModel book;
+
+  const BookInfo({Key? key, required this.book}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class BookInfo extends StatelessWidget {
         SizedBox(
           width: 50.w,
           child: Text(
-            "Harry Potter and the Goblet of fire.",
+            book.volumeInfo!.title!,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: Styles.kSectraFineTitleMedium,
@@ -25,8 +26,9 @@ class BookInfo extends StatelessWidget {
         ),
         SizedBox(height: 2.h),
         Text(
-          "Anas Nabih",
-          style: Styles.kMonsterratMedium.copyWith(color: Colors.white.withOpacity(0.7)),
+          book.volumeInfo!.authors!.first,
+          style: Styles.kMonsterratSmall
+              .copyWith(color: Colors.white.withOpacity(0.7)),
         ),
         SizedBox(height: 2.h),
         SizedBox(
@@ -34,21 +36,11 @@ class BookInfo extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                "19.99 \$",
+                "Free",
                 style: Styles.kMonsterratLarge,
               ),
               const Spacer(),
-              Icon(Icons.star, size: 2.5.h, color: Colors.amber),
-              Text(
-                "4.8",
-                style: Styles.kMonsterratLarge.copyWith(fontSize: 13.sp),
-              ),
-              SizedBox(width: 1.w),
-              Text(
-                "(2390)",
-                style: Styles.kMonsterratSmall
-                    .copyWith(color: Colors.white.withOpacity(0.5)),
-              ),
+              BookRating(rating: book.volumeInfo?.averageRating ?? 5,count: book.volumeInfo?.ratingsCount ?? 1),
             ],
           ),
         )
@@ -56,3 +48,5 @@ class BookInfo extends StatelessWidget {
     );
   }
 }
+
+

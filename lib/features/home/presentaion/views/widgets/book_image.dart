@@ -1,9 +1,11 @@
+import 'package:bookly/core/utils/image_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class BookImage extends StatelessWidget {
+  final String imageURl;
   const BookImage({
-    Key? key,
+    Key? key,required this.imageURl
   }) : super(key: key);
 
   @override
@@ -15,6 +17,10 @@ class BookImage extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.grey.withOpacity(.5),
           borderRadius: BorderRadius.circular(8)),
+      child: ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+        child: ImageLoader.loadCachedNetworkImage(imageURl),
+      ),
     );
   }
 }

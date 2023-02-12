@@ -1,10 +1,14 @@
+import 'package:bookly/features/home/data/models/book_model.dart';
 import 'package:bookly/features/home/presentaion/views/widgets/book_image.dart';
 import 'package:bookly/features/home/presentaion/views/widgets/book_info.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class BookItem extends StatelessWidget {
-  const BookItem({Key? key}) : super(key: key);
+  final BookModel book;
+  const BookItem({Key? key,required this.book}) : super(key: key);
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +16,9 @@ class BookItem extends StatelessWidget {
       padding:EdgeInsets.only(bottom: 2.h),
       child: Row(
         children: [
-          const BookImage(),
+            BookImage(imageURl: book!.volumeInfo!.imageLinks!.thumbnail!),
           SizedBox(width: 4.w),
-          const BookInfo()
+            BookInfo(book: book,)
         ],
       ),
     );

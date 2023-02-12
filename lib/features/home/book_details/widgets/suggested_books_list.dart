@@ -14,7 +14,7 @@ class SuggestedBooksList extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 8,
-        itemBuilder: (context, index) => const BookImage(),
+        itemBuilder: (context, index) => Text("anas")/*const BookImage()*/,
       ),
     );
   }

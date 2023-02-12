@@ -21,7 +21,8 @@ class SearchViewBody extends StatelessWidget {
           Expanded(
               child: ListView.builder(
             itemCount: 10,
-            itemBuilder: (context, index) => const BookItem(),
+            itemBuilder: (context, index) => Text("anas"),
+            // itemBuilder: (context, index) => const BookItem(),
           ))
         ],
       ),
