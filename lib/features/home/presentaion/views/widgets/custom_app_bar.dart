@@ -1,5 +1,6 @@
 import 'package:bookly/core/constants.dart';
 import 'package:bookly/core/utils/assets_data.dart';
+import 'package:bookly/core/utils/image_loader.dart';
 import 'package:bookly/core/utils/utils.dart';
 import 'package:bookly/features/search/presentation/search_view.dart';
 import 'package:flutter/material.dart';
@@ -18,13 +19,12 @@ class CustomAppBar extends StatelessWidget {
         children: [
           SizedBox(
             height: 4.h,
-            child: Utils.loadImage(img: AssetsData.logo),
+            child: ImageLoader.loadImage(img: AssetsData.logo),
           ),
           GestureDetector(
             onTap: () => Utils.push(
                 context: context, navigationScreen: const SearchView()),
-           child: Utils.loadSvgImg(svgImg: AssetsData.icSearch),
-
+            child: ImageLoader.loadSvgImg(svgImg: AssetsData.icSearch),
           )
         ],
       ),

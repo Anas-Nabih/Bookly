@@ -1,11 +1,10 @@
-import 'package:bookly/core/utils/utils.dart';
+import 'package:bookly/core/utils/image_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class CustomIcon extends StatelessWidget {
-  const CustomIcon({
-    Key? key,required this.svgImg,required this.onTapped
-  }) : super(key: key);
+  const CustomIcon({Key? key, required this.svgImg, required this.onTapped})
+      : super(key: key);
 
   final String svgImg;
   final void Function()? onTapped;
@@ -17,7 +16,7 @@ class CustomIcon extends StatelessWidget {
       child: SizedBox(
           height: 4.h,
           width: 3.h,
-          child: Utils.loadSvgImg(svgImg: svgImg)),
+          child: ImageLoader.loadSvgImg(svgImg: svgImg)),
     );
   }
 }

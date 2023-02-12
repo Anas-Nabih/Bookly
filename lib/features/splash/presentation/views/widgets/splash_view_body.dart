@@ -1,4 +1,5 @@
 import 'package:bookly/core/utils/assets_data.dart';
+import 'package:bookly/core/utils/image_loader.dart';
 import 'package:bookly/core/utils/utils.dart';
 import 'package:bookly/features/home/presentaion/views/home_view.dart';
 import 'package:bookly/features/splash/presentation/views/widgets/sliding_text.dart';
@@ -36,7 +37,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Utils.loadImage(img: AssetsData.logo),
+        ImageLoader.loadImage(img: AssetsData.logo),
         SizedBox(height: 3.h),
         SlidingText(slidingAnimation: _slidingAnimation)
       ],
