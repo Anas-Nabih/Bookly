@@ -98,7 +98,7 @@ class VolumeInfo {
   VolumeInfo.fromJson(Map<String, dynamic> json) {
     title = json['title'];
     subtitle = json['subtitle'];
-    authors = json['authors'].cast<String>();
+    authors = (json['authors'] as List<dynamic>?)?.cast<String>();
     publisher = json['publisher'];
     publishedDate = json['publishedDate'];
     description = json['description'];
@@ -113,7 +113,7 @@ class VolumeInfo {
         : null;
     pageCount = json['pageCount'];
     printType = json['printType'];
-    categories = json['categories'].cast<String>();
+    categories = (json['categories']as List<dynamic>?)?.cast<String>();;
     maturityRating = json['maturityRating'];
     allowAnonLogging = json['allowAnonLogging'];
     contentVersion = json['contentVersion'];
