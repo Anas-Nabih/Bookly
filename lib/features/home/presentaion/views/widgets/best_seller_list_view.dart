@@ -3,6 +3,7 @@ import 'package:bookly/core/widgets/custom_error.dart';
 import 'package:bookly/features/home/book_details/book_details.dart';
 import 'package:bookly/features/home/presentaion/manager/newest_books_cubit/newest_books_cubit.dart';
 import 'package:bookly/features/home/presentaion/views/widgets/best_seller_item.dart';
+import 'package:bookly/features/home/presentaion/views/widgets/best_seller_shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -28,9 +29,7 @@ class BestSellerListView extends StatelessWidget {
       } else if (state is NewestBooksFailure) {
         return CustomErrorMSG(errorMSG: state.errorMSG);
       } else {
-        return Center(
-          child: CircularProgressIndicator(),
-        );
+        return const BestSellerShimmer();
       }
     });
   }
