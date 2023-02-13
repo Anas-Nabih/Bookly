@@ -1,8 +1,8 @@
-import 'package:bookly/core/widgets/custom_error.dart';
-import 'package:bookly/features/home/book_details/widgets/similar_books_shimmer.dart';
-import 'package:bookly/features/home/data/models/book_model.dart';
-import 'package:bookly/features/home/presentaion/manager/similar_books/similar_books_cubit.dart';
-import 'package:bookly/features/home/presentaion/views/widgets/book_image.dart';
+import 'package:bookShelf/core/widgets/custom_error.dart';
+import 'package:bookShelf/features/home/book_details/widgets/similar_books_shimmer.dart';
+import 'package:bookShelf/features/home/data/models/book_model.dart';
+import 'package:bookShelf/features/home/presentaion/manager/similar_books/similar_books_cubit.dart';
+import 'package:bookShelf/features/home/presentaion/views/widgets/book_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';

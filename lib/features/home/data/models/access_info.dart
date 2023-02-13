@@ -1,4 +1,4 @@
-import 'package:bookly/features/home/data/models/epub_model.dart';
+import 'package:bookShelf/features/home/data/models/epub_model.dart';
 
 class AccessInfo {
   String? country;

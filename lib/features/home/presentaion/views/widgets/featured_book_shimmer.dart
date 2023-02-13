@@ -1,4 +1,4 @@
-import 'package:bookly/res/colors.dart';
+import 'package:bookShelf/res/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:sizer/sizer.dart';

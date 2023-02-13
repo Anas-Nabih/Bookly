@@ -1,5 +1,5 @@
-import 'package:bookly/core/constants.dart';
-import 'package:bookly/core/utils/styles.dart';
+import 'package:bookShelf/core/constants.dart';
+import 'package:bookShelf/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class TextHeadline extends StatelessWidget {

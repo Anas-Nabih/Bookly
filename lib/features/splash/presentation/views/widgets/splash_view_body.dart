@@ -1,8 +1,8 @@
-import 'package:bookly/core/utils/assets_data.dart';
-import 'package:bookly/core/utils/image_loader.dart';
-import 'package:bookly/core/utils/utils.dart';
-import 'package:bookly/features/home/presentaion/views/home_view.dart';
-import 'package:bookly/features/splash/presentation/views/widgets/sliding_text.dart';
+import 'package:bookShelf/core/utils/assets_data.dart';
+import 'package:bookShelf/core/utils/image_loader.dart';
+import 'package:bookShelf/core/utils/utils.dart';
+import 'package:bookShelf/features/home/presentaion/views/home_view.dart';
+import 'package:bookShelf/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 

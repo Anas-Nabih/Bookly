@@ -1,6 +1,6 @@
-// import 'package:bookly/features/home/book_details/book_details.dart';
-// import 'package:bookly/features/home/presentaion/views/home_view.dart';
-// import 'package:bookly/features/splash/presentation/views/splash_view.dart';
+// import 'package:bookShelf/features/home/book_details/book_details.dart';
+// import 'package:bookShelf/features/home/presentaion/views/home_view.dart';
+// import 'package:bookShelf/features/splash/presentation/views/splash_view.dart';
 //
 // abstract class AppRouter{
 //

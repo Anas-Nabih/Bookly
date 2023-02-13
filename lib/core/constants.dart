@@ -1,7 +1,7 @@
 import 'package:sizer/sizer.dart';
 
 class Const {
-  static const String appName = "Bookly";
+  static const String appName = "bookShelf";
   static const String kGTSectraFine = "GT Sectra Fine";
   static const String kMontserrat = "Montserrat";
   static const Duration durationTransition = Duration(milliseconds: 250);

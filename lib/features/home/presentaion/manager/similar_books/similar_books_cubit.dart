@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:bookly/features/home/data/models/book_model.dart';
-import 'package:bookly/features/home/data/repo/home_repo.dart';
+import 'package:bookShelf/features/home/data/models/book_model.dart';
+import 'package:bookShelf/features/home/data/repo/home_repo.dart';
 import 'package:meta/meta.dart';
 
 part 'similar_books_state.dart';

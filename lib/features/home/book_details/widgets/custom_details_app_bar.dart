@@ -1,4 +1,4 @@
-import 'package:bookly/features/home/book_details/widgets/custom_icon.dart';
+import 'package:bookShelf/features/home/book_details/widgets/custom_icon.dart';
 import 'package:flutter/material.dart';
 
 class CustomDetailsAppBar extends StatelessWidget {

@@ -1,7 +1,7 @@
-import 'package:bookly/features/home/data/models/images_link_model.dart';
-import 'package:bookly/features/home/data/models/industry_identifiers_model.dart';
-import 'package:bookly/features/home/data/models/panelization_summary_model.dart';
-import 'package:bookly/features/home/data/models/reading_modes_model.dart';
+import 'package:bookShelf/features/home/data/models/images_link_model.dart';
+import 'package:bookShelf/features/home/data/models/industry_identifiers_model.dart';
+import 'package:bookShelf/features/home/data/models/panelization_summary_model.dart';
+import 'package:bookShelf/features/home/data/models/reading_modes_model.dart';
 
 class VolumeInfo {
   String? title;

@@ -1,21 +1,21 @@
-import 'package:bookly/core/constants.dart';
-import 'package:bookly/core/utils/service_locator.dart';
-import 'package:bookly/features/home/data/repo/home_repo_implementation.dart';
-import 'package:bookly/features/home/presentaion/manager/featured_books_cubit/featured_books_cubit.dart';
-import 'package:bookly/features/home/presentaion/manager/newest_books_cubit/newest_books_cubit.dart';
-import 'package:bookly/features/splash/presentation/views/splash_view.dart';
-import 'package:bookly/res/colors.dart';
+import 'package:bookShelf/core/constants.dart';
+import 'package:bookShelf/core/utils/service_locator.dart';
+import 'package:bookShelf/features/home/data/repo/home_repo_implementation.dart';
+import 'package:bookShelf/features/home/presentaion/manager/featured_books_cubit/featured_books_cubit.dart';
+import 'package:bookShelf/features/home/presentaion/manager/newest_books_cubit/newest_books_cubit.dart';
+import 'package:bookShelf/features/splash/presentation/views/splash_view.dart';
+import 'package:bookShelf/res/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
   setupServiceLocator();
-  runApp(const BooklyApp());
+  runApp(const bookShelfApp());
 }
 
-class BooklyApp extends StatelessWidget {
-  const BooklyApp({Key? key}) : super(key: key);
+class bookShelfApp extends StatelessWidget {
+  const bookShelfApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

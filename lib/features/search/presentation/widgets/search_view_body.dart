@@ -1,6 +1,6 @@
-import 'package:bookly/core/constants.dart';
-import 'package:bookly/features/home/presentaion/views/widgets/best_seller_item.dart';
-import 'package:bookly/features/search/presentation/widgets/custom_text_field.dart';
+import 'package:bookShelf/core/constants.dart';
+import 'package:bookShelf/features/home/presentaion/views/widgets/best_seller_item.dart';
+import 'package:bookShelf/features/search/presentation/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
