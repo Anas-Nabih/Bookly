@@ -1,20 +1,29 @@
+import 'package:bookly/core/utils/image_loader.dart';
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/features/home/data/models/book_model.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class BookDetailsInfo extends StatelessWidget {
-  const BookDetailsInfo({Key? key}) : super(key: key);
+  final BookModel book;
+
+  const BookDetailsInfo({Key? key, required this.book}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          height: 32.h,
+          height: 33.h,
           width: 45.w,
           decoration: BoxDecoration(
               color: Colors.grey.withOpacity(.5),
               borderRadius: BorderRadius.circular(8)),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: ImageLoader.loadCachedNetworkImage(
+                book.volumeInfo!.imageLinks!.thumbnail!),
+          ),
         ),
         SizedBox(height: 3.h),
         Column(
@@ -22,7 +31,7 @@ class BookDetailsInfo extends StatelessWidget {
             SizedBox(
               width: 50.w,
               child: Text(
-                "Harry Potter and the Goblet of fire.",
+                book.volumeInfo!.title!,
                 maxLines: 2,
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
@@ -31,7 +40,7 @@ class BookDetailsInfo extends StatelessWidget {
             ),
             SizedBox(height: 1.5.h),
             Text(
-              "Anas Nabih",
+              book.volumeInfo!.authors![0],
               style: Styles.kMonsterratMedium.copyWith(
                   fontSize: 12.sp, color: Colors.white.withOpacity(0.7)),
             ),
@@ -41,12 +50,12 @@ class BookDetailsInfo extends StatelessWidget {
               children: [
                 Icon(Icons.star, size: 2.5.h, color: Colors.amber),
                 Text(
-                  "4.8",
+                  book.volumeInfo?.averageRating?.toString() ?? "0",
                   style: Styles.kMonsterratLarge.copyWith(fontSize: 13.sp),
                 ),
                 SizedBox(width: 1.w),
                 Text(
-                  "(2390)",
+                  "(${book.volumeInfo?.ratingsCount?.toString() ?? "0"})",
                   style: Styles.kMonsterratSmall
                       .copyWith(color: Colors.white.withOpacity(0.5)),
                 )

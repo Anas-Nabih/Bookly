@@ -1,4 +1,6 @@
+import 'package:bookly/core/utils/utils.dart';
 import 'package:bookly/core/widgets/custom_error.dart';
+import 'package:bookly/features/home/book_details/book_details.dart';
 import 'package:bookly/features/home/presentaion/manager/featured_books_cubit/featured_books_cubit.dart';
 import 'package:bookly/features/home/presentaion/views/widgets/featured_book_item.dart';
 import 'package:bookly/features/home/presentaion/views/widgets/featured_book_shimmer.dart';
@@ -14,12 +16,19 @@ class FeaturedBooksListView extends StatelessWidget {
     return BlocBuilder<FeaturedBooksCubit, FeaturedBooksState>(
         builder: (context, state) {
       if (state is FeaturedBooksSuccess) {
-         return SizedBox(
+        return SizedBox(
           height: 28.h,
           child: ListView.builder(
             itemCount: state.featuredBooks.length,
             scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) => FeaturedBookItem(imageURL: state.featuredBooks[index]!.volumeInfo!.imageLinks!.thumbnail!),
+            itemBuilder: (context, index) => GestureDetector(
+                onTap: () => Utils.push(
+                    context: context,
+                    navigationScreen:
+                        BookDetailsView(book: state.featuredBooks[index])),
+                child: FeaturedBookItem(
+                    imageURL: state.featuredBooks[index]!.volumeInfo!
+                        .imageLinks!.thumbnail!)),
           ),
         );
       } else if (state is FeaturedBooksFailure) {

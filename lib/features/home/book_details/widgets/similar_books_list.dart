@@ -1,4 +1,5 @@
 import 'package:bookly/core/widgets/custom_error.dart';
+import 'package:bookly/features/home/book_details/widgets/similar_books_shimmer.dart';
 import 'package:bookly/features/home/data/models/book_model.dart';
 import 'package:bookly/features/home/presentaion/manager/similar_books/similar_books_cubit.dart';
 import 'package:bookly/features/home/presentaion/views/widgets/book_image.dart';
@@ -6,22 +7,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
-class SuggestedBooksList extends StatefulWidget {
+class SimilarBooksList extends StatefulWidget {
   final BookModel book;
 
-  const SuggestedBooksList({Key? key, required this.book}) : super(key: key);
+  const SimilarBooksList({Key? key, required this.book}) : super(key: key);
 
   @override
-  State<SuggestedBooksList> createState() => _SuggestedBooksListState();
+  State<SimilarBooksList> createState() => _SimilarBooksListState();
 }
 
-class _SuggestedBooksListState extends State<SuggestedBooksList> {
+class _SimilarBooksListState extends State<SimilarBooksList> {
   @override
   void initState() {
     BlocProvider.of<SimilarBooksCubit>(context)
         .getSimilarBooks(category: widget.book!.volumeInfo!.categories![0]);
-    debugPrint(widget.book!.volumeInfo!.categories![0]);
-    super.initState();
+     super.initState();
   }
 
   @override
@@ -41,7 +41,7 @@ class _SuggestedBooksListState extends State<SuggestedBooksList> {
         } else if (state is SimilarBooksFailure) {
           return CustomErrorMSG(errorMSG: state.errorMSG);
         } else {
-          return CircularProgressIndicator();
+          return const SimilarBooksShimmer();
         }
       }),
     );

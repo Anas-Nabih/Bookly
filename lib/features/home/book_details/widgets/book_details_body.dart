@@ -3,7 +3,7 @@ import 'package:bookly/core/utils/service_locator.dart';
 import 'package:bookly/features/home/book_details/widgets/book_detais_info.dart';
 import 'package:bookly/features/home/book_details/widgets/buy_and_free_preview_button.dart';
 import 'package:bookly/features/home/book_details/widgets/custom_details_app_bar.dart';
-import 'package:bookly/features/home/book_details/widgets/suggested_books_list.dart';
+import 'package:bookly/features/home/book_details/widgets/similar_books_list.dart';
 import 'package:bookly/features/home/data/models/book_model.dart';
 import 'package:bookly/features/home/data/repo/home_repo_implementation.dart';
 import 'package:bookly/features/home/presentaion/manager/similar_books/similar_books_cubit.dart';
@@ -28,7 +28,7 @@ class BookDetailsBody extends StatelessWidget {
           children: [
             const CustomDetailsAppBar(),
             SizedBox(height: 1.h),
-            const BookDetailsInfo(),
+            BookDetailsInfo(book: book),
             SizedBox(height: 2.h),
             const BuyAndFreePreviewButton(),
             SizedBox(height: 2.h),
@@ -38,7 +38,7 @@ class BookDetailsBody extends StatelessWidget {
             BlocProvider(
                 create: (context) =>
                     SimilarBooksCubit(getItInstance.get<HomeRepoImpl>()),
-                child: SuggestedBooksList(
+                child: SimilarBooksList(
                   book: book,
                 ))
           ],
