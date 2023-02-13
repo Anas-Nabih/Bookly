@@ -1,4 +1,6 @@
+import 'package:bookShelf/features/search/presentation/manager/search_cubit/search_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({Key? key}) : super(key: key);
@@ -6,6 +8,8 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onSubmitted: (val)=>
+      BlocProvider.of<SearchCubit>(context).getSearchBooks(keyWord: val),
       decoration: InputDecoration(
         border: buildTextFieldBorder(),
         filled: true,
