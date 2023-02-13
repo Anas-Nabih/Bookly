@@ -1,6 +1,6 @@
 import 'package:bookShelf/features/home/data/models/book_model.dart';
-import 'package:bookShelf/features/home/presentaion/views/widgets/book_image.dart';
-import 'package:bookShelf/features/home/presentaion/views/widgets/book_info.dart';
+import 'package:bookShelf/features/home/presentation/views/widgets/book_image.dart';
+import 'package:bookShelf/features/home/presentation/views/widgets/book_info.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -16,7 +16,7 @@ class BookItem extends StatelessWidget {
       padding:EdgeInsets.only(bottom: 2.h),
       child: Row(
         children: [
-            BookImage(imageURl: book!.volumeInfo!.imageLinks!.thumbnail!),
+            BookImage(imageURl: book.volumeInfo!.imageLinks!.thumbnail!),
           SizedBox(width: 4.w),
             BookInfo(book: book,)
         ],

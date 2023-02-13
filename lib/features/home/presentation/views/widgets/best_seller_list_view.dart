@@ -1,9 +1,9 @@
 import 'package:bookShelf/core/utils/utils.dart';
 import 'package:bookShelf/core/widgets/custom_error.dart';
 import 'package:bookShelf/features/home/book_details/book_details.dart';
-import 'package:bookShelf/features/home/presentaion/manager/newest_books_cubit/newest_books_cubit.dart';
-import 'package:bookShelf/features/home/presentaion/views/widgets/best_seller_item.dart';
-import 'package:bookShelf/features/home/presentaion/views/widgets/best_seller_shimmer.dart';
+import 'package:bookShelf/features/home/presentation/manager/newest_books_cubit/newest_books_cubit.dart';
+import 'package:bookShelf/features/home/presentation/views/widgets/best_seller_item.dart';
+import 'package:bookShelf/features/home/presentation/views/widgets/best_seller_shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

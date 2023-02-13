@@ -1,9 +1,9 @@
 import 'package:bookShelf/core/utils/assets_data.dart';
-import 'package:bookShelf/core/utils/image_loader.dart';
 import 'package:bookShelf/core/utils/utils.dart';
-import 'package:bookShelf/features/home/presentaion/views/home_view.dart';
+import 'package:bookShelf/features/home/presentation/views/home_view.dart';
 import 'package:bookShelf/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:sizer/sizer.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -21,7 +21,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     handleAnimation();
-    handleNavigation();
     super.initState();
   }
 
@@ -37,8 +36,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        ImageLoader.loadImage(img: AssetsData.logo),
-        SizedBox(height: 3.h),
+        Lottie.asset(AssetsData.jsonLogo,
+            height: 35.h,
+            controller: _animationController,
+            onLoaded: (composition) {
+          _animationController
+            ..duration = composition.duration
+            ..forward().whenComplete(() => Utils.push(
+                context: context, navigationScreen: const HomeView()));
+        }),
         SlidingText(slidingAnimation: _slidingAnimation)
       ],
     );
@@ -48,15 +54,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
     _animationController =
         AnimationController(duration: const Duration(seconds: 1), vsync: this);
     _slidingAnimation =
-        Tween<Offset>(begin: const Offset(0, 5), end: Offset.zero)
+        Tween<Offset>(begin: const Offset(0,5), end: Offset.zero)
             .animate(_animationController);
     _animationController.forward();
-  }
-
-  handleNavigation() {
-    Future.delayed(
-      const Duration(seconds: 2),
-      () => Utils.push(context: context, navigationScreen: const HomeView()),
-    );
   }
 }

@@ -1,8 +1,8 @@
 import 'package:bookShelf/core/constants.dart';
 import 'package:bookShelf/core/utils/service_locator.dart';
 import 'package:bookShelf/features/home/data/repo/home_repo_implementation.dart';
-import 'package:bookShelf/features/home/presentaion/manager/featured_books_cubit/featured_books_cubit.dart';
-import 'package:bookShelf/features/home/presentaion/manager/newest_books_cubit/newest_books_cubit.dart';
+import 'package:bookShelf/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
+import 'package:bookShelf/features/home/presentation/manager/newest_books_cubit/newest_books_cubit.dart';
 import 'package:bookShelf/features/splash/presentation/views/splash_view.dart';
 import 'package:bookShelf/res/colors.dart';
 import 'package:flutter/material.dart';

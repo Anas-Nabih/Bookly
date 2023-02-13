@@ -6,8 +6,8 @@ import 'package:bookShelf/features/home/book_details/widgets/custom_details_app_
 import 'package:bookShelf/features/home/book_details/widgets/similar_books_list.dart';
 import 'package:bookShelf/features/home/data/models/book_model.dart';
 import 'package:bookShelf/features/home/data/repo/home_repo_implementation.dart';
-import 'package:bookShelf/features/home/presentaion/manager/similar_books/similar_books_cubit.dart';
-import 'package:bookShelf/features/home/presentaion/views/widgets/text_headline.dart';
+import 'package:bookShelf/features/home/presentation/manager/similar_books/similar_books_cubit.dart';
+import 'package:bookShelf/features/home/presentation/views/widgets/text_headline.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';

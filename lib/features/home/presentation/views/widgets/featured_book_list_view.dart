@@ -1,9 +1,9 @@
 import 'package:bookShelf/core/utils/utils.dart';
 import 'package:bookShelf/core/widgets/custom_error.dart';
 import 'package:bookShelf/features/home/book_details/book_details.dart';
-import 'package:bookShelf/features/home/presentaion/manager/featured_books_cubit/featured_books_cubit.dart';
-import 'package:bookShelf/features/home/presentaion/views/widgets/featured_book_item.dart';
-import 'package:bookShelf/features/home/presentaion/views/widgets/featured_book_shimmer.dart';
+import 'package:bookShelf/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
+import 'package:bookShelf/features/home/presentation/views/widgets/featured_book_item.dart';
+import 'package:bookShelf/features/home/presentation/views/widgets/featured_book_shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
@@ -27,7 +27,7 @@ class FeaturedBooksListView extends StatelessWidget {
                     navigationScreen:
                         BookDetailsView(book: state.featuredBooks[index])),
                 child: FeaturedBookItem(
-                    imageURL: state.featuredBooks[index]!.volumeInfo!
+                    imageURL: state.featuredBooks[index].volumeInfo!
                         .imageLinks!.thumbnail!)),
           ),
         );

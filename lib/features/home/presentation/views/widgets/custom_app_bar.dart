@@ -1,6 +1,7 @@
 import 'package:bookShelf/core/constants.dart';
 import 'package:bookShelf/core/utils/assets_data.dart';
 import 'package:bookShelf/core/utils/image_loader.dart';
+import 'package:bookShelf/core/utils/styles.dart';
 import 'package:bookShelf/core/utils/utils.dart';
 import 'package:bookShelf/features/search/presentation/search_view.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class CustomAppBar extends StatelessWidget {
         children: [
           SizedBox(
             height: 4.h,
-            child: ImageLoader.loadImage(img: AssetsData.logo),
+            child: Text("BookShelf",style: Styles.kMonsterratLarge,),
           ),
           GestureDetector(
             onTap: () => Utils.push(
