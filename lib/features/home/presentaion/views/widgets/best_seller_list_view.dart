@@ -21,7 +21,7 @@ class BestSellerListView extends StatelessWidget {
           itemCount: state.newsetBook.length,
           itemBuilder: (context, index) => GestureDetector(
               onTap: () => Utils.push(
-                  context: context, navigationScreen: const BookDetailsView()),
+                  context: context, navigationScreen: BookDetailsView(book: state.newsetBook[index],)),
               child: BookItem(
                 book: state.newsetBook[index],
               )),

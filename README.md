@@ -1,6 +1,6 @@
 # bookshelf
 
-- **cross platform app built with (MVP) Architectural Pattern, Clean code & Clean Architecture and
+- **cross platform app built with (MVVM) Architectural Pattern, Clean code & Clean Architecture and
   have NetWork Manager, Prefs manager and Utils manager.**
 
 ## Packages i use:
