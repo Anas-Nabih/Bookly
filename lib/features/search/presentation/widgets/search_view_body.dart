@@ -15,6 +15,8 @@ class SearchViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
 
+
+
       create: (context) => SearchCubit(getItInstance.get<SearchRepoImpl>()),
       child: Padding(
         padding: EdgeInsets.symmetric(
